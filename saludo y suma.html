@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saludo y Suma</title>
+</head>
+<body>
+  <h1>Ximena Colin Gonzales </h1>
+  <script>
+    // Función para pedir el nombre y saludar
+    function pedirNombreYsaludar() {
+      var nombre = prompt("Por favor, introduce tu nombre:");
+      if (nombre) { // Verificar que se haya ingresado un nombre
+        alert("¡Hola, " + nombre + "!");
+        pedirNumerosYSumar();
+      } else {
+        alert("Por favor, introduce un nombre válido.");
+      }
+    }
+
+    // Función para pedir 3 números, sumarlos y mostrar el resultado
+    function pedirNumerosYSumar() {
+      var num1 = parseFloat(prompt("Introduce el primer número:"));
+      var num2 = parseFloat(prompt("Introduce el segundo número:"));
+      var num3 = parseFloat(prompt("Introduce el tercer número:"));
+
+      if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) { // Verificar que se ingresaron números válidos
+        var suma = num1 + num2 + num3;
+        document.body.innerHTML += "<h2>El resultado de la suma es:</h2>";
+        document.body.innerHTML += "<h1>" + suma + "</h1>";
+      } else {
+        alert("Por favor, introduce números válidos.");
+      }
+    }
+
+    // Llamar a la función al cargar la página
+    pedirNombreYsaludar();
+  </script>
+</body>
+</html>
